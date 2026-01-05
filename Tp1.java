@@ -12,7 +12,9 @@ public class Tp1 {
 		scanner = new Scanner(System.in);
 
 		// Appel de la méthode de l'exercice 1.1
-		exercice1_2();
+		//exercice1_1();
+		//exercice1_2();
+		exercice2_1();
 
 		scanner.close();
 	}
@@ -54,6 +56,27 @@ public class Tp1 {
 		x = y;
 		y = tempVariable;
 		System.out.print("Les valeurs sont permutées, x vaut " + x + " et y vaut " + y);
+	}
+
+	// Méthode de l'exercice n°2.1
+	public static void exercice2_1() {
+		String firstWord;
+		String secondWord;
+
+		System.out.print("Saisir un premier mot : ");
+		firstWord = scanner.next();
+
+		System.out.print("Saisir un second mot : ");
+		secondWord = scanner.next();
+
+		if (firstWord.length() > secondWord.length()){
+			System.out.print("Bonjour est le mot \"" + firstWord + "\" avec le plus de caractères.");
+		} else if (firstWord.length() == secondWord.length()) {
+			System.out.print("Les deux mots ont le même nombre de caractères");
+		}
+		else {
+			System.out.print("Bonjour est le mot  \"" + secondWord + "\" avec le plus de caractères.");
+		}
 	}
 
 }
