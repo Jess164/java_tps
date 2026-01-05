@@ -12,7 +12,7 @@ public class Tp1 {
 		scanner = new Scanner(System.in);
 
 		// Appel de la méthode de l'exercice 1.1
-		exercice1_1();
+		exercice1_2();
 
 		scanner.close();
 	}
@@ -27,11 +27,12 @@ public class Tp1 {
 		
 		// 2° - Initialisation
 		System.out.println("Prénom : ");
-		System.out.println("Nom : ");
-		System.out.println("Age : ");
-
 		prenom = scanner.next();
+
+		System.out.println("Nom : ");
 		nom = scanner.next();
+
+		System.out.println("Age : ");
 		age = scanner.nextInt();
 
 		// 3° - Utilisation
@@ -40,7 +41,19 @@ public class Tp1 {
 
 	// Méthode de l'exercice n°1.2 
 	public static void exercice1_2() {
-		// ...
+		int x;
+		int y;
+		int tempVariable;
+		System.out.println("Saisir valeur de x : ");
+		x = scanner.nextInt();
+
+		System.out.println("Saisir valeur de y : ");
+		y = scanner.nextInt();
+
+		tempVariable = x;
+		x = y;
+		y = tempVariable;
+		System.out.print("Les valeurs sont permutées, x vaut " + x + " et y vaut " + y);
 	}
 
 }
