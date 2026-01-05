@@ -14,7 +14,8 @@ public class Tp1 {
 		// Appel de la méthode de l'exercice 1.1
 		//exercice1_1();
 		//exercice1_2();
-		exercice2_1();
+		//exercice2_1();
+		exercice2_2();
 
 		scanner.close();
 	}
@@ -76,6 +77,23 @@ public class Tp1 {
 		}
 		else {
 			System.out.print("Bonjour est le mot  \"" + secondWord + "\" avec le plus de caractères.");
+		}
+	}
+
+	// Méthode de l'exercice n°2.2
+	public static void exercice2_2() {
+		int annee;
+		System.out.print("Saisir une année : ");
+		annee = scanner.nextInt();
+
+		boolean isDivisibleBy400 =  annee % 400 == 0;
+		boolean isDivisibleBy4AndNotBy100 = annee % 4 == 0 && annee % 100 != 0;
+
+		if (isDivisibleBy4AndNotBy100 || isDivisibleBy400){
+			System.out.print("L'annee " + annee + " est bissextile");
+		}
+		else{
+			System.out.print("L'annee " + annee + " n'est pas bissextile");
 		}
 	}
 
