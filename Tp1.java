@@ -22,13 +22,20 @@ public class Tp1 {
 
 		// 1° - Déclaration
 		String prenom;
+		String nom;
+		int age;
 		
 		// 2° - Initialisation
-		System.out.print("Prénom : ");
+		System.out.println("Prénom : ");
+		System.out.println("Nom : ");
+		System.out.println("Age : ");
+
 		prenom = scanner.next();
+		nom = scanner.next();
+		age = scanner.nextInt();
 
 		// 3° - Utilisation
-		System.out.println("Bonjour " + prenom);
+		System.out.print("Bonjour " + prenom + " " + nom + " (" + age + " ans)." );
 	}
 
 	// Méthode de l'exercice n°1.2 
