@@ -15,7 +15,8 @@ public class Tp1 {
 		//exercice1_2();
 		//exercice2_1();
 		//exercice2_2();
-		exercice3_1();
+		//exercice3_1();
+		exercice4_1();
 
 		scanner.close();
 	}
@@ -121,6 +122,34 @@ public class Tp1 {
 		System.out.print("le maximum vaut " + maxValue + " (numéro " + maxIndex + ")" + " et le minimum vaut " + minValue + " (numéro " + minIndex + ")");
 
 
+	}
+
+	// Méthode de l'exercice n°4.1
+	public static void exercice4_1() {
+		int secretNumber = (int) (Math.random() * 101);
+		System.out.println("secretNumber :" + secretNumber);
+		int tries = 0;
+		int proposition = 101 ;
+
+		while(secretNumber != proposition && tries <= 6){
+			System.out.print("Entrer un nombre : ");
+			proposition = scanner.nextInt();
+
+			if (1<= Math.abs(secretNumber - proposition) && Math.abs(secretNumber - proposition) <=5 ){
+				System.out.println("-----> Chaud");
+			} else if (6<= Math.abs(secretNumber - proposition) && Math.abs(secretNumber - proposition) <=20) {
+				System.out.println("-----> Tiède");
+			} else{
+				System.out.println("-----> Froid");
+			}
+			tries++;
+		}
+
+		if (proposition == secretNumber){
+			System.out.println("-----> Gagné (" + tries + " tentatives)");
+		}else{
+			System.out.println("-----> Perdu : Le nombre secret était " + secretNumber);
+		}
 	}
 
 }
