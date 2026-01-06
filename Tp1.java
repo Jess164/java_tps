@@ -157,27 +157,25 @@ public class Tp1 {
 
 	// Méthode de l'exercice n°4.2 (Do while)
 	public static void exercice4_2() {
-		public static void exercice4_2 () {
-			int nombre0rdi = (int) (Math.random() * 101);
-			System.out.println(nombre0rdi);
-			int cpt = 0;
-			int nombreUtilisateur;
-			do {
-				System.out.println("Entrer un nombre : ");
-				nombreUtilisateur = scanner.nextInt();
-				cpt++;
-				int distance = Math.abs(nombreUtilisateur - nombre0rdi);
-				if (distance > 20)
-					System.out.println("Froid");
-				else if (distance > 5)
-					System.out.println("Tiède");
-				else if (distance > 0)
-					System.out.println("Chaud");
-				else {
-					System.out.println("Gagné en " + cpt + " tentatives");
-				}
-				while (nombre0rdi != nombreUtilisateur) ;
-			};
-		}
+		int nombre0rdi = (int) (Math.random() * 101);
+		System.out.println(nombre0rdi);
+		int cpt = 0;
+		int nombreUtilisateur;
+		do {
+			System.out.println("Entrer un nombre : ");
+			nombreUtilisateur = scanner.nextInt();
+			cpt++;
+			int distance = Math.abs(nombreUtilisateur - nombre0rdi);
+			if (distance > 20)
+				System.out.println("Froid");
+			else if (distance > 5)
+				System.out.println("Tiède");
+			else if (distance > 0)
+				System.out.println("Chaud");
+			else {
+				System.out.println("Gagné en " + cpt + " tentatives");
+			}
+		} while (nombre0rdi != nombreUtilisateur) ;
 	}
 }
+
