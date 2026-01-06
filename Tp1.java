@@ -17,6 +17,7 @@ public class Tp1 {
 		//exercice2_2();
 		//exercice3_1();
 		exercice4_1();
+		//exercice4_2();
 
 		scanner.close();
 	}
@@ -134,10 +135,12 @@ public class Tp1 {
 		while(secretNumber != proposition && tries <= 6){
 			System.out.print("Entrer un nombre : ");
 			proposition = scanner.nextInt();
+			int distance = Math.abs(secretNumber - proposition);
 
-			if (1<= Math.abs(secretNumber - proposition) && Math.abs(secretNumber - proposition) <=5 ){
+			if (0 == distance) break;
+			else if (1<= distance && distance <=5){
 				System.out.println("-----> Chaud");
-			} else if (6<= Math.abs(secretNumber - proposition) && Math.abs(secretNumber - proposition) <=20) {
+			} else if (6<= distance && distance <=20) {
 				System.out.println("-----> Tiède");
 			} else{
 				System.out.println("-----> Froid");
@@ -152,4 +155,29 @@ public class Tp1 {
 		}
 	}
 
+	// Méthode de l'exercice n°4.2 (Do while)
+	public static void exercice4_2() {
+		public static void exercice4_2 () {
+			int nombre0rdi = (int) (Math.random() * 101);
+			System.out.println(nombre0rdi);
+			int cpt = 0;
+			int nombreUtilisateur;
+			do {
+				System.out.println("Entrer un nombre : ");
+				nombreUtilisateur = scanner.nextInt();
+				cpt++;
+				int distance = Math.abs(nombreUtilisateur - nombre0rdi);
+				if (distance > 20)
+					System.out.println("Froid");
+				else if (distance > 5)
+					System.out.println("Tiède");
+				else if (distance > 0)
+					System.out.println("Chaud");
+				else {
+					System.out.println("Gagné en " + cpt + " tentatives");
+				}
+				while (nombre0rdi != nombreUtilisateur) ;
+			};
+		}
+	}
 }
