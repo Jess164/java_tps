@@ -1,4 +1,3 @@
-import java.util.Random;
 import java.util.Scanner;
 
 public class Tp1 {
@@ -15,7 +14,8 @@ public class Tp1 {
 		//exercice1_1();
 		//exercice1_2();
 		//exercice2_1();
-		exercice2_2();
+		//exercice2_2();
+		exercice3_1();
 
 		scanner.close();
 	}
@@ -44,31 +44,32 @@ public class Tp1 {
 
 	// Méthode de l'exercice n°1.2 
 	public static void exercice1_2() {
-		int x;
-		int y;
-		int tempVariable;
 		System.out.println("Saisir valeur de x : ");
-		x = scanner.nextInt();
+		int x = scanner.nextInt();
 
 		System.out.println("Saisir valeur de y : ");
-		y = scanner.nextInt();
+		int y = scanner.nextInt();
 
-		tempVariable = x;
+		int tempVariable = x;
 		x = y;
 		y = tempVariable;
+
+		/*
+			x = x + y;
+			y = x - y;
+			x = x - y;
+		*/
+
 		System.out.print("Les valeurs sont permutées, x vaut " + x + " et y vaut " + y);
 	}
 
 	// Méthode de l'exercice n°2.1
 	public static void exercice2_1() {
-		String firstWord;
-		String secondWord;
-
 		System.out.print("Saisir un premier mot : ");
-		firstWord = scanner.next();
+		String firstWord = scanner.next();
 
 		System.out.print("Saisir un second mot : ");
-		secondWord = scanner.next();
+		String secondWord = scanner.next();
 
 		if (firstWord.length() > secondWord.length()){
 			System.out.print("Bonjour est le mot \"" + firstWord + "\" avec le plus de caractères.");
@@ -95,6 +96,31 @@ public class Tp1 {
 		else{
 			System.out.print("L'annee " + annee + " n'est pas bissextile");
 		}
+	}
+
+	// Méthode de l'exercice n°3.1
+	public static void exercice3_1() {
+		int maxValue = -1;
+		int maxIndex = 0;
+		int minValue = 101;
+		int minIndex =0;
+
+		for (int i = 1; i < 10; i++) {
+			int randomValue = (int)(Math.random() * 101);
+			if (randomValue < minValue){
+				minValue = randomValue;
+				minIndex = i;
+			}
+			if (randomValue > maxValue){
+				maxValue = randomValue;
+				maxIndex = i;
+			}
+			System.out.println("Le nombre " + i + " vaut " + randomValue);
+		}
+
+		System.out.print("le maximum vaut " + maxValue + " (numéro " + maxIndex + ")" + " et le minimum vaut " + minValue + " (numéro " + minIndex + ")");
+
+
 	}
 
 }
